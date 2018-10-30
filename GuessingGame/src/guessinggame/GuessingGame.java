@@ -15,25 +15,43 @@ public class GuessingGame {
         boolean Closeprogram = true;
         int guest;
         int RNG;
+        String name;
+        String I;
         int tries = 0;
         while (Closeprogram) {
             
+
+            
+            System.out.println("Name Options");
+            System.out.println("New name");
+            System.out.println("Load name");
+            I = in.nextLine();
+            
+            if (I.contains("New name")){
+                System.out.println("Enter name");
+                    name = in.nextLine();
+            }
+            if else (I.contains("Load name")){
+                System.out.println("Type in the filename");
+                    name = in.nextLine();
+        }
+                    
+                            
             RNG = (int)(Math.random()* 10)+ 1;
-            
-            String I;
+      
             while (tries != 3){
-            
+                System.out.println("Name: "+name);
                 System.out.println("Guest the number");
                 guest = in.nextInt();
                 
                 if (guest > RNG){
                  
-                    System.out.println(guest+" was incorrect by "+(guest - RNG));
+                    System.out.println(guest+" was below the generate Number");
                     ++tries;
                 }
                 else if (guest < RNG){
                 
-                    System.out.println(guest+" was incorrect by "+(guest - RNG));
+                    System.out.println(guest+" was below the generate Number");
                     ++tries; 
                 }
                 else if (guest == RNG){
@@ -51,41 +69,3 @@ public class GuessingGame {
                     Closeprogram = false;
             }
         }
-        
-        
-        
-        
-        
-        /*  String n;
-        Scanner in = new Scanner(System.in);
-        System.out.println("Do you want to create a new name?");
-        n = in.nextLine();
-        if (n.contains("Yes")){
-            System.out.println("Type in name");
-            n = in.nextLine();
-        }
-        else if (n.contains("No")){
-            n = null;
-            String loadnamefromfile;
-            System.out.println("Type Name fillname?");
-            String filepath = in.nextLine();
-            String loadedN = loadnamefromfile(filepath); 
-    }
-        String i;
-        int RNG[];
-        RNG = new int[100];
-        int[] Guests;
-        Guests = new int[100];
-        int p;
-        int o;
-
-
-*/
-    }//main
-    
-    
-    // the two file reading/writing methods will go in here
-    
-    
-    
-}// class
